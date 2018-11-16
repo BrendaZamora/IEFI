@@ -57,13 +57,20 @@
 
         ClienteForm.IdTextBox1.Text = clientesList.Item(fila).Id
         ClienteForm.NombreTextBox2.Text = clientesList.Item(fila).Nombre
-        ClienteForm.IdProvincias.Text = clientesList.Item(fila).IdProvincia
+        'ClienteForm.IdProvincias.Text = clientesList.Item(fila).IdProvincia
+        'Debe llenar la propiedad agregada por nosotros IdProvincia.
+        ClienteForm.IdProvincia = clientesList.Item(fila).IdProvincia
     End Sub
 
     Private Sub ClientesGrid_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If DataGridView1.Rows.Count > 0 Then
             DataGridView1.Rows(0).Selected = True
         End If
+
+        'Se debe proporcionar la fuente de datos del BindingSource.
+        ClientesCollectionBindingSource.DataSource = clientesList.TraerClientes
+        'Se debe llenar provinciasList para que se muestre la columna nomprovincia
+        provinciasList.TraerProvincia()
 
         'IdProvincias.ComboBox.DataSource = provinciasList.TraerProvincia
 
@@ -75,4 +82,5 @@
 
 
     End Sub
+
 End Class

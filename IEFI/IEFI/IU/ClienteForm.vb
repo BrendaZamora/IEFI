@@ -70,7 +70,9 @@
 
         IdProvincias.DataSource = provinciasList.TraerProvincia()
 
-        IdProvincias.DisplayMember = "Nombre"
+        'IdProvincias.DisplayMember = "Nombre"
+        'La columna para mostrar de provincias se llama Provincia
+        IdProvincias.DisplayMember = "Provincia"
 
         IdProvincias.ValueMember = "Id"
 

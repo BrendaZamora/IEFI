@@ -47,7 +47,8 @@ Public Class ClientesCollection
 
             MiCliente.Id = CInt(dr("Id"))
             MiCliente.Nombre = dr("Nombre")
-            MiCliente.IdProvincia = CInt("IdProvincia")
+            'MiCliente.IdProvincia = CInt("IdProvincia")
+            MiCliente.IdProvincia = CInt(dr("IdProvincia"))
 
             Me.Add(MiCliente)
         Next
