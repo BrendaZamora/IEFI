@@ -68,7 +68,7 @@
         End If
 
         'Se debe proporcionar la fuente de datos del BindingSource.
-        ClientesCollectionBindingSource.DataSource = clientesList.TraerClientes
+        'ClientesCollectionBindingSource.DataSource = clientesList.TraerClientes
         'Se debe llenar provinciasList para que se muestre la columna nomprovincia
         provinciasList.TraerProvincia()
 

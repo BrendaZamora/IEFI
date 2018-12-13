@@ -30,6 +30,10 @@ Partial Class ClienteForm
         Me.IdProvincias = New System.Windows.Forms.ComboBox()
         Me.Aceptar = New System.Windows.Forms.Button()
         Me.Cancelar = New System.Windows.Forms.Button()
+        Me.Fecha = New System.Windows.Forms.Label()
+        Me.Saldo = New System.Windows.Forms.Label()
+        Me.TextBoxFecha = New System.Windows.Forms.TextBox()
+        Me.TextBoxSaldo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Id
@@ -39,9 +43,9 @@ Partial Class ClienteForm
         Me.Id.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Id.Location = New System.Drawing.Point(92, 59)
         Me.Id.Name = "Id"
-        Me.Id.Size = New System.Drawing.Size(23, 20)
+        Me.Id.Size = New System.Drawing.Size(27, 20)
         Me.Id.TabIndex = 0
-        Me.Id.Text = "Id"
+        Me.Id.Text = "Id:"
         '
         'Nombre
         '
@@ -49,9 +53,9 @@ Partial Class ClienteForm
         Me.Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Nombre.Location = New System.Drawing.Point(50, 109)
         Me.Nombre.Name = "Nombre"
-        Me.Nombre.Size = New System.Drawing.Size(65, 20)
+        Me.Nombre.Size = New System.Drawing.Size(69, 20)
         Me.Nombre.TabIndex = 1
-        Me.Nombre.Text = "Nombre"
+        Me.Nombre.Text = "Nombre:"
         '
         'Provincias
         '
@@ -60,9 +64,9 @@ Partial Class ClienteForm
         Me.Provincias.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Provincias.Location = New System.Drawing.Point(35, 154)
         Me.Provincias.Name = "Provincias"
-        Me.Provincias.Size = New System.Drawing.Size(80, 20)
+        Me.Provincias.Size = New System.Drawing.Size(84, 20)
         Me.Provincias.TabIndex = 2
-        Me.Provincias.Text = "Provincias"
+        Me.Provincias.Text = "Provincias:"
         '
         'IdTextBox1
         '
@@ -81,6 +85,7 @@ Partial Class ClienteForm
         '
         'IdProvincias
         '
+        Me.IdProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IdProvincias.FormattingEnabled = True
         Me.IdProvincias.Location = New System.Drawing.Point(144, 153)
         Me.IdProvincias.Name = "IdProvincias"
@@ -89,7 +94,7 @@ Partial Class ClienteForm
         '
         'Aceptar
         '
-        Me.Aceptar.Location = New System.Drawing.Point(144, 213)
+        Me.Aceptar.Location = New System.Drawing.Point(144, 322)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(88, 36)
         Me.Aceptar.TabIndex = 6
@@ -98,18 +103,56 @@ Partial Class ClienteForm
         '
         'Cancelar
         '
-        Me.Cancelar.Location = New System.Drawing.Point(306, 213)
+        Me.Cancelar.Location = New System.Drawing.Point(310, 322)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(84, 36)
         Me.Cancelar.TabIndex = 7
         Me.Cancelar.Text = "Cancelar"
         Me.Cancelar.UseVisualStyleBackColor = True
         '
+        'Fecha
+        '
+        Me.Fecha.AutoSize = True
+        Me.Fecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Fecha.Location = New System.Drawing.Point(65, 206)
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.Size = New System.Drawing.Size(58, 20)
+        Me.Fecha.TabIndex = 8
+        Me.Fecha.Text = "Fecha:"
+        '
+        'Saldo
+        '
+        Me.Saldo.AutoSize = True
+        Me.Saldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Saldo.Location = New System.Drawing.Point(69, 253)
+        Me.Saldo.Name = "Saldo"
+        Me.Saldo.Size = New System.Drawing.Size(54, 20)
+        Me.Saldo.TabIndex = 9
+        Me.Saldo.Text = "Saldo:"
+        '
+        'TextBoxFecha
+        '
+        Me.TextBoxFecha.Location = New System.Drawing.Point(144, 206)
+        Me.TextBoxFecha.Name = "TextBoxFecha"
+        Me.TextBoxFecha.Size = New System.Drawing.Size(155, 20)
+        Me.TextBoxFecha.TabIndex = 10
+        '
+        'TextBoxSaldo
+        '
+        Me.TextBoxSaldo.Location = New System.Drawing.Point(144, 255)
+        Me.TextBoxSaldo.Name = "TextBoxSaldo"
+        Me.TextBoxSaldo.Size = New System.Drawing.Size(155, 20)
+        Me.TextBoxSaldo.TabIndex = 11
+        '
         'ClienteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(480, 265)
+        Me.ClientSize = New System.Drawing.Size(480, 370)
+        Me.Controls.Add(Me.TextBoxSaldo)
+        Me.Controls.Add(Me.TextBoxFecha)
+        Me.Controls.Add(Me.Saldo)
+        Me.Controls.Add(Me.Fecha)
         Me.Controls.Add(Me.Cancelar)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.IdProvincias)
@@ -119,6 +162,7 @@ Partial Class ClienteForm
         Me.Controls.Add(Me.Nombre)
         Me.Controls.Add(Me.Id)
         Me.Name = "ClienteForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ClienteForm"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -133,4 +177,8 @@ Partial Class ClienteForm
     Friend WithEvents IdProvincias As ComboBox
     Friend WithEvents Aceptar As Button
     Friend WithEvents Cancelar As Button
+    Friend WithEvents Fecha As Label
+    Friend WithEvents Saldo As Label
+    Friend WithEvents TextBoxFecha As TextBox
+    Friend WithEvents TextBoxSaldo As TextBox
 End Class
